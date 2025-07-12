@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anggaais.me/sitemap.xml
+
+Allow: /me.jpg
+Allow: /favicon.ico
+Allow: /manifest.json
+
+Crawl-delay: 1
+
+Disallow: /build/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /.well-known/
+Disallow: /.git/
+Disallow: /node_modules/
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Block resource-heavy crawlers
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /

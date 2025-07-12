@@ -1,0 +1,26 @@
+{
+  "name": "Angga Islami Pasya - Portfolio",
+  "short_name": "AnggaaIs",
+  "description": "Portfolio website of Angga Islami Pasya - Software Engineer & Creative Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "portfolio",
+    "developer",
+    "technology"
+  ],
+  "lang": "en-US",
+  "scope": "/",
+  "id": "anggaais-portfolio"
+}
