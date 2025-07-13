@@ -2,7 +2,11 @@ import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
 import { useState, useEffect, useRef } from "react";
 
-export function Navbar() {
+interface NavbarProps {
+  isBannerVisible?: boolean;
+}
+
+export function Navbar({ isBannerVisible = false }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
@@ -59,7 +63,9 @@ export function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border"
+      className={`fixed left-0 right-0 z-40 bg-background/80 backdrop-blur-md border-b border-border transition-all duration-500 ease-in-out ${
+        isBannerVisible ? "top-[4rem]" : "top-0"
+      }`}
     >
       <div className="container mx-auto max-w-6xl px-6 md:px-4">
         <div className="flex items-center justify-between h-16">
