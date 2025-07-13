@@ -5,7 +5,6 @@ import { useState, useEffect, useRef } from "react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
   const scrollToSection = (sectionId: string) => {
@@ -132,7 +131,7 @@ export function Navbar() {
             <Button
               size="sm"
               className="hover:-translate-y-0.5 transition-all duration-300"
-              onClick={() => setIsContactModalOpen(true)}
+              onClick={() => scrollToSection("contact")}
             >
               Contact
             </Button>
@@ -142,7 +141,7 @@ export function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-muted-foreground hover:text-foreground focus:outline-none focus:text-foreground transition-all duration-300"
+              className="flex items-center justify-center w-10 h-10 text-muted-foreground hover:text-foreground focus:outline-none focus:text-foreground transition-all duration-300"
               aria-label="Toggle menu"
             >
               <svg
@@ -232,8 +231,7 @@ export function Navbar() {
                     size="sm"
                     className="flex-1 text-xs h-9"
                     onClick={() => {
-                      setIsContactModalOpen(true);
-                      setIsOpen(false);
+                      scrollToSection("contact");
                     }}
                   >
                     Contact
@@ -244,12 +242,6 @@ export function Navbar() {
           </ScrollArea>
         </div>
       </div>
-
-      {/* Contact Modal */}
-      <ContactModal
-        isOpen={isContactModalOpen}
-        onClose={() => setIsContactModalOpen(false)}
-      />
     </nav>
   );
 }
