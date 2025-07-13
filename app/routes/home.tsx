@@ -62,6 +62,18 @@ export function meta({}: Route.MetaArgs) {
       content: "https://anggaais.me/me.jpg",
     },
     {
+      property: "og:image:width",
+      content: "1200",
+    },
+    {
+      property: "og:image:height",
+      content: "630",
+    },
+    {
+      property: "og:image:type",
+      content: "image/jpeg",
+    },
+    {
       property: "og:image:alt",
       content: "Angga Islami Pasya - Software Engineer & Creative Developer",
     },
@@ -95,7 +107,14 @@ export function meta({}: Route.MetaArgs) {
       name: "twitter:image:alt",
       content: "Angga Islami Pasya - Software Engineer & Creative Developer",
     },
-    // Additional SEO tags
+    {
+      name: "twitter:creator",
+      content: "@AnggaaIs",
+    },
+    {
+      name: "twitter:site",
+      content: "@AnggaaIs",
+    },
     {
       name: "geo.region",
       content: "ID-SB",
@@ -112,7 +131,6 @@ export function meta({}: Route.MetaArgs) {
       name: "ICBM",
       content: "-0.9471, 100.4172",
     },
-    // Canonical URL
     {
       rel: "canonical",
       href: "https://anggaais.me",
@@ -138,7 +156,6 @@ export default function Home() {
     }
   };
 
-  // JSON-LD Structured Data
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -150,8 +167,8 @@ export default function Home() {
     image: "https://anggaais.me/me.jpg",
     sameAs: [
       "https://github.com/AnggaaIs",
-      "https://linkedin.com/in/angga-islami-pasya",
-      "https://instagram.com/anggaislami",
+      "https://linkedin.com/in/anggaislamipasya",
+      "https://instagram.com/angggaais",
     ],
     alumniOf: {
       "@type": "CollegeOrUniversity",
