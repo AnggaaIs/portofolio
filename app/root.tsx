@@ -14,6 +14,7 @@ import { ScrollArea } from "~/components/ui/scroll-area";
 import { useClientSide } from "~/hooks/use-client-side";
 import { Footer } from "./components/footer";
 import { Navbar } from "./components/navbar";
+import { Analytics } from "@vercel/analytics/react";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -49,6 +50,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="no-animation">
+        <Analytics />
         <ScrollArea className="h-screen w-full">
           {isClient ? (
             <ThemeProvider defaultTheme="light" storageKey="anggaais-theme">
