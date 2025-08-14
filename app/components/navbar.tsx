@@ -78,9 +78,17 @@ export function Navbar({ isBannerVisible = false }: NavbarProps) {
             />
             <a
               href="/"
-              className="text-xl font-bold text-foreground font-serif hover:text-primary transition-colors duration-300"
+              className="text-xl font-bold font-serif transition-colors duration-300"
             >
-              Angga<span className="text-primary"> Pasya</span>
+              <div className="group inline-block cursor-pointer">
+                <span className="text-foreground group-hover:text-primary transition-colors duration-300">
+                  Angga
+                </span>
+                <span className="text-primary group-hover:text-foreground transition-colors duration-300">
+                  {" "}
+                  Pasya
+                </span>
+              </div>
             </a>
           </div>
 
@@ -128,7 +136,6 @@ export function Navbar({ isBannerVisible = false }: NavbarProps) {
             </a>
           </div>
 
-          {/* Desktop CTA Buttons - Right */}
           <div className="hidden md:flex items-center space-x-4">
             <a
               href="https://github.com/AnggaaIs/portofolio"
